@@ -11,25 +11,25 @@ df_data['YEAR'] = df_data['DATE'].dt.year
 df_yearly = df_data.groupby('YEAR', as_index=False)['PRCP'].mean()
 
 # Plot of Yearly Average
-'''
+
 fig, ax = plt.subplots()
 plt.plot(df_yearly['YEAR'], df_yearly['PRCP'], color='red', label='Precipitation')
 plt.xlabel('Year')
-plt.ylabel('Precipitation, ')
+plt.ylabel('Precipitation, inches')
 plt.legend()
-plt.title('Beijing Average Yearly Precipitation')
+plt.title('Beijing Average Yearly Precipitation /in')
 plt.show()
-'''
+
 
 # Next plot average by month
-df_data['MONTH'] = df_data['DATE'].dt.month
-df_monthly = df_data.groupby('MONTH', as_index=False)['PRCP'].mean()
-print(df_monthly)
+# df_data['MONTH'] = df_data['DATE'].dt.month
+# df_monthly = df_data.groupby('MONTH', as_index=False)['PRCP'].mean()
+# print(df_monthly)
 
-fig, ax = plt.subplots()
-plt.plot(df_monthly['MONTH'], df_monthly['PRCP'], color='red', label='Precipitation')
-plt.xlabel('Month')
-plt.ylabel('Precipitation, ')
-plt.legend()
-plt.title('Beijing Average Yearly Precipitation')
-plt.show()
+# fig, ax = plt.subplots()
+# plt.plot(df_monthly['MONTH'], df_monthly['PRCP'], color='red', label='Precipitation')
+# plt.xlabel('Month')
+# plt.ylabel('Precipitation, inches')
+# plt.legend()
+# plt.title('Beijing Average Yearly Precipitation /in')
+# plt.show()
