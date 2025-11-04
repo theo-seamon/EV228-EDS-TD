@@ -13,11 +13,13 @@ df_yearly = df_data.groupby('YEAR', as_index=False)['PRCP'].mean()
 # Plot of Yearly Average
 
 fig, ax = plt.subplots()
-plt.plot(df_yearly['YEAR'], df_yearly['PRCP'], color='red', label='Precipitation')
+plt.plot(df_yearly['YEAR'], df_yearly['PRCP'], color='green', linewidth=1.1)
 plt.xlabel('Year')
-plt.ylabel('Precipitation, inches')
+plt.ylabel('Precipitation (mm)')
 plt.legend()
-plt.title('Beijing Average Yearly Precipitation /in')
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.title('Beijing Average Yearly Precipitation')
+plt.xlim(1951, 2025)
 plt.show()
 
 
